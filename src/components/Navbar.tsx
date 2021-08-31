@@ -40,7 +40,7 @@ export function Navbar() {
 
   return (
     <div className="flex justify-between px-5 py-3 my-3 ">
-      <span className="text-xl font-bold border-b-4 text-green border-green md:text-2xl">
+      <span className="text-xl font-bold border-b-4 border-black-200 md:text-2xl">
         {activeItem === 'About'
           ? 'Sobre'
           : activeItem === 'Projects'

@@ -4,7 +4,7 @@ import { AiOutlineAntDesign, AiOutlineApi } from 'react-icons/ai';
 import { MdDeveloperMode } from 'react-icons/md';
 import { BsCircleFill } from 'react-icons/bs';
 
-import { ServicesProps, SkillProps } from './type';
+import { ProjectsProps, ServicesProps, SkillProps } from './type';
 
 export const services: ServicesProps[] = [
   {
@@ -88,5 +88,62 @@ export const tools: SkillProps[] = [
     name: 'Sony vegas',
     level: '85%',
     Icon: BsCircleFill,
+  },
+];
+
+export const projects: ProjectsProps[] = [
+  {
+    name: 'MyWallet',
+    description: 'Um webapp para controlar seus custos e finanças',
+    image_path: '/images/teste.jpg',
+    deployer_url: 'https://mywallet-d74e3.web.app/',
+    github_url: 'https://github.com/wellingtonvx/mywallet',
+    category: ['React'],
+    key_techs: ['React', 'Firebase', 'Styled Component'],
+  },
+  {
+    name: 'My_Wallet',
+    description: 'Um webapp para controlar seus custos e finanças',
+    image_path: '/images/teste.jpg',
+    deployer_url: 'https://mywallet-d74e3.web.app/',
+    github_url: 'https://github.com/wellingtonvx/mywallet',
+    category: ['React'],
+    key_techs: ['React', 'Firebase', 'Styled Component'],
+  },
+  {
+    name: 'My-Wallet',
+    description: 'Um webapp para controlar seus custos e finanças',
+    image_path: '/images/teste.jpg',
+    deployer_url: 'https://mywallet-d74e3.web.app/',
+    github_url: 'https://github.com/wellingtonvx/mywallet',
+    category: ['React'],
+    key_techs: ['React', 'Firebase', 'Styled Component'],
+  },
+  {
+    name: 'My/Wallet',
+    description: 'Um webapp para controlar seus custos e finanças',
+    image_path: '/images/teste.jpg',
+    deployer_url: 'https://mywallet-d74e3.web.app/',
+    github_url: 'https://github.com/wellingtonvx/mywallet',
+    category: ['React'],
+    key_techs: ['React', 'Firebase', 'Styled Component'],
+  },
+  {
+    name: 'My..Wallet',
+    description: 'Um webapp para controlar seus custos e finanças',
+    image_path: '/images/teste.jpg',
+    deployer_url: 'https://mywallet-d74e3.web.app/',
+    github_url: 'https://github.com/wellingtonvx/mywallet',
+    category: ['React'],
+    key_techs: ['React', 'Firebase', 'Styled Component'],
+  },
+  {
+    name: 'My|Wallet',
+    description: 'Um webapp para controlar seus custos e finanças',
+    image_path: '/images/teste.jpg',
+    deployer_url: 'https://mywallet-d74e3.web.app/',
+    github_url: 'https://github.com/wellingtonvx/mywallet',
+    category: ['React'],
+    key_techs: ['React', 'Firebase', 'Styled Component'],
   },
 ];
