@@ -1,44 +1,92 @@
-import { IconType } from 'react-icons';
 import { RiComputerLine } from 'react-icons/ri';
 import { FaServer } from 'react-icons/fa';
 import { AiOutlineAntDesign, AiOutlineApi } from 'react-icons/ai';
 import { MdDeveloperMode } from 'react-icons/md';
+import { BsCircleFill } from 'react-icons/bs';
 
-interface ServicesProps {
-  title: string;
-  about: string;
-  icon: IconType;
-}
+import { ServicesProps, SkillProps } from './type';
 
 export const services: ServicesProps[] = [
   {
     title: 'Desenvolvedor Front-end',
     about:
       'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b> ',
-    icon: RiComputerLine,
+    Icon: RiComputerLine,
   },
   {
-    title: 'Desenvolvedor Front-end',
+    title: 'Desenvoledor Front-end',
     about:
       'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b> ',
-    icon: FaServer,
+    Icon: FaServer,
   },
   {
-    title: 'Desenvolvedor Front-end',
+    title: 'Desenvlvedor Front-end',
     about:
       'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b> ',
-    icon: AiOutlineAntDesign,
+    Icon: AiOutlineAntDesign,
   },
   {
-    title: 'Desenvolvedor Front-end',
+    title: 'Desenvolvedr Front-end',
     about:
       'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b> ',
-    icon: AiOutlineApi,
+    Icon: AiOutlineApi,
   },
   {
-    title: 'Desenvolvedor Front-end',
+    title: 'Desenvolvedor Frnt-end',
     about:
       'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b> ',
-    icon: MdDeveloperMode,
+    Icon: MdDeveloperMode,
+  },
+  {
+    title: 'Deenvolvedor Frnt-end',
+    about:
+      'I can build a beautiful and scalable SPA using <b>HTML</b>, <b>CSS</b> and <b>React.js</b> ',
+    Icon: MdDeveloperMode,
+  },
+];
+
+export const languages: SkillProps[] = [
+  {
+    name: 'JavaScript',
+    level: '80%',
+    Icon: BsCircleFill,
+  },
+  {
+    name: 'HTML',
+    level: '90%',
+    Icon: BsCircleFill,
+  },
+  {
+    name: 'CSS',
+    level: '90%',
+    Icon: BsCircleFill,
+  },
+  {
+    name: 'React',
+    level: '85%',
+    Icon: BsCircleFill,
+  },
+  {
+    name: 'React Native',
+    level: '50%',
+    Icon: BsCircleFill,
+  },
+];
+
+export const tools: SkillProps[] = [
+  {
+    name: 'Photoshop',
+    level: '80%',
+    Icon: BsCircleFill,
+  },
+  {
+    name: 'Figma',
+    level: '65%',
+    Icon: BsCircleFill,
+  },
+  {
+    name: 'Sony vegas',
+    level: '85%',
+    Icon: BsCircleFill,
   },
 ];

@@ -23,8 +23,15 @@ export function Navbar() {
     return activeItem !== name ? (
       <Link href={route}>
         <a>
-          <span className="hover:text-green" onClick={() => setActiveItem(name)}>
-            {name === 'About' ? 'Sobre' : name === 'Projects' ? 'Projeto' : 'Resumo'}
+          <span
+            className="hover:text-green"
+            onClick={() => setActiveItem(name)}
+          >
+            {name === 'About'
+              ? 'Sobre'
+              : name === 'Projects'
+              ? 'Projetos'
+              : 'Resumo'}
           </span>
         </a>
       </Link>
@@ -34,10 +41,19 @@ export function Navbar() {
   return (
     <div className="flex justify-between px-5 py-3 my-3 ">
       <span className="text-xl font-bold border-b-4 text-green border-green md:text-2xl">
-        {activeItem === 'About' ? 'Sobre' : activeItem === 'Projects' ? 'Projeto' : 'Resumo'}
+        {activeItem === 'About'
+          ? 'Sobre'
+          : activeItem === 'Projects'
+          ? 'Projetos'
+          : 'Resumo'}
       </span>
       <div className="flex space-x-5 text-lg ">
-        <NavItem activeItem={activeItem} setActiveItem={setActiveItem} name="About" route="/" />
+        <NavItem
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
+          name="About"
+          route="/"
+        />
 
         <NavItem
           activeItem={activeItem}
