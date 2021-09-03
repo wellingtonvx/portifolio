@@ -1,6 +1,7 @@
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
 import { GiTie } from 'react-icons/gi';
+import Image from 'next/image';
 
 import { useTheme } from 'next-themes';
 
@@ -13,10 +14,14 @@ export function Sidebar() {
 
   return (
     <div>
-      <img
+      <Image
         src="https://avatars.githubusercontent.com/u/60943819?v=4"
         alt="user avatar"
-        className="w-32 h-32 mx-auto rounded-full"
+        className="mx-auto rounded-full"
+        width="128px"
+        height="128px"
+        layout="intrinsic"
+        quality="100"
       />
 
       <h3 className="my-4 text-2xl font-medium tracking-wider font-kaushan">
@@ -71,7 +76,7 @@ export function Sidebar() {
         onClick={changeTheme}
         className="w-8/12 px-5 py-2 my-2 font-semibold text-white bg-black rounded-full bg-gradient-to-r from-green to-blue-400"
       >
-        Mudar tema
+        Mudar UI
       </button>
     </div>
   );

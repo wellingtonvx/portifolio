@@ -1,12 +1,20 @@
 import { languages, tools } from '../util/data';
 import { Bar } from '../components/Bar';
 
+import { motion } from 'framer-motion';
+import { fadeInUp, routeAnimation } from '../util/animations';
+
 export default function Resume() {
   return (
-    <div className="px-4 py-2 ">
+    <motion.div
+      variants={routeAnimation}
+      initial="initial"
+      animate="animate"
+      className="px-4 py-2 "
+    >
       {/* //education */}
       <div className="grid gap-6 md:grid-cols-2">
-        <div>
+        <motion.div variants={fadeInUp} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">Formação</h5>
           <div>
             <h5 className="my-2 text-xl font-bold">Redes de computadores</h5>
@@ -18,8 +26,8 @@ export default function Resume() {
               todas as áreas.
             </p>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={fadeInUp} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">Experiência</h5>
           <div>
             <h5 className="my-2 text-xl font-bold">
@@ -30,7 +38,7 @@ export default function Resume() {
               Contrução do layout, optimização, reponsividade, mobile
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* languages e tools */}
       <div className="grid gap-6 md:grid-cols-2">
@@ -51,6 +59,6 @@ export default function Resume() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

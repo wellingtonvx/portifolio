@@ -2,9 +2,17 @@
 import { services } from '../util/data';
 import { ServiceCard } from '../components/ServiceCard';
 
+import { motion } from 'framer-motion';
+import { fadeInUp, routeAnimation, stagger } from '../util/animations';
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1">
+    <motion.div
+      variants={routeAnimation}
+      initial="initial"
+      animate="animate"
+      className="flex flex-col flex-grow px-6 pt-1"
+    >
       <h5 className="my-3 font-medium">
         Sou desenvolvedor JavaScript, amante de desenvolvimento. Tendo
         experiências em alguns projetos utilizando React/Next. No momento estou
@@ -18,18 +26,24 @@ export default function Home() {
         style={{ marginLeft: '-1.5rem', marginRight: '-1.5rem' }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">Conhecimentos</h6>
-        <div className="grid gap-6 lg:grid-cols-2">
+        <motion.div
+          className="grid gap-6 my-3 lg:grid-cols-2"
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+        >
           {services.map(service => (
-            <div
+            <motion.div
               key={service.title}
+              variants={fadeInUp}
               className="bg-gray-200 rounded-lg dark:bg-dark-200 lg:col-span-1"
             >
               <ServiceCard service={service} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

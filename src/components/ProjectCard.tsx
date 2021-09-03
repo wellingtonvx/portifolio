@@ -1,12 +1,14 @@
 import { FunctionComponent, useState } from 'react';
+import Image from 'next/image';
 import { ProjectsProps } from '../util/type';
 import { AiFillGithub, AiFillProject } from 'react-icons/ai';
 import { MdClose } from 'react-icons/md';
+import { motion } from 'framer-motion';
+import { fadeInUp, stagger } from '../util/animations';
 
 export const ProjectCard: FunctionComponent<{ project: ProjectsProps }> = ({
   project: {
     name,
-    category,
     deployer_url,
     description,
     github_url,
@@ -17,20 +19,33 @@ export const ProjectCard: FunctionComponent<{ project: ProjectsProps }> = ({
   const [showDetails, setShowDetails] = useState(false);
   return (
     <div>
-      <img
+      <Image
         src={image_path}
         alt={name}
         className="cursor-pointer"
         onClick={() => setShowDetails(true)}
+        width="300"
+        height="150"
       />
 
       <p className="my-2 text-center">{name}</p>
 
       {showDetails && (
-        <div className="absolute top-0 left-0 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
-          <div>
-            <img src={image_path} alt={name} />
-            <div className="flex justify-center my-4 space-x-3">
+        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100 ">
+          <motion.div variants={stagger} initial="initial" animate="animate">
+            <motion.div variants={fadeInUp}>
+              <Image
+                src={image_path}
+                alt={name}
+                width="300"
+                height="150"
+                layout="responsive"
+              />
+            </motion.div>
+            <motion.div
+              variants={fadeInUp}
+              className="flex justify-center my-4 space-x-3"
+            >
               <a
                 href={github_url}
                 target="_blank"
@@ -47,12 +62,23 @@ export const ProjectCard: FunctionComponent<{ project: ProjectsProps }> = ({
                 <AiFillProject />
                 <span>Projeto</span>
               </a>
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-3 text-xl font-medium md:text-2xl">{name}</h2>
-            <h3 className="mb-3 font-medium">{description}</h3>
-            <div className="flex flex-wrap mt-5 space-x-2 tracking-wider ">
+            </motion.div>
+          </motion.div>
+          <motion.div variants={stagger} initial="initial" animate="animate">
+            <motion.h2
+              variants={fadeInUp}
+              className="mb-3 text-xl font-medium md:text-2xl"
+            >
+              {name}
+            </motion.h2>
+            <motion.h3 variants={fadeInUp} className="mb-3 font-medium">
+              {description}
+            </motion.h3>
+
+            <motion.div
+              variants={fadeInUp}
+              className="flex flex-wrap mt-5 space-x-2 tracking-wider "
+            >
               {key_techs.map(tech => (
                 <span
                   key={tech}
@@ -61,8 +87,8 @@ export const ProjectCard: FunctionComponent<{ project: ProjectsProps }> = ({
                   {tech}
                 </span>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <button
             onClick={() => setShowDetails(false)}
             className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
