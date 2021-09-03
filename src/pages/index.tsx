@@ -11,6 +11,7 @@ export default function Home() {
       variants={routeAnimation}
       initial="initial"
       animate="animate"
+      exit="exit"
       className="flex flex-col flex-grow px-6 pt-1"
     >
       <h5 className="my-3 font-medium">

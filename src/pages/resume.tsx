@@ -10,6 +10,7 @@ export default function Resume() {
       variants={routeAnimation}
       initial="initial"
       animate="animate"
+      exit="exit"
       className="px-4 py-2 "
     >
       {/* //education */}
