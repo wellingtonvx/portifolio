@@ -1,11 +1,11 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetServerSideProps } from 'next';
 import { services } from '../util/data';
 import { ServiceCard } from '../components/ServiceCard';
 
 import { motion } from 'framer-motion';
 import { fadeInUp, routeAnimation, stagger } from '../util/animations';
 
-export default function Home({ endpoint }) {
+export default function Home() {
   return (
     <motion.div
       variants={routeAnimation}
@@ -48,9 +48,7 @@ export default function Home({ endpoint }) {
   );
 }
 
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext,
-) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   // const response = await fetch(`${process.env.VERCEL_URL}/api/services`);
   // const data = await response.json();
   return {
