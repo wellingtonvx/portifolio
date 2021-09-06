@@ -13,6 +13,7 @@ export interface SkillProps {
 }
 
 export interface ProjectsProps {
+  id: number;
   name: string;
   description: string;
   image_path: string;

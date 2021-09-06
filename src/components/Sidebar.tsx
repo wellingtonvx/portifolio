@@ -32,9 +32,9 @@ export function Sidebar() {
         Dev. Front-end
       </p>
       <a
-        href=""
+        href="/curriculo.pdf"
         className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200"
-        download="name"
+        download="Currículo-José Wellington Ribeiro da Rocha"
       >
         <GiTie className="w-6 h-6" />
         Donwload CV

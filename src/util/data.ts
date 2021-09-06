@@ -93,6 +93,7 @@ export const tools: SkillProps[] = [
 
 export const projects: ProjectsProps[] = [
   {
+    id: 1,
     name: 'MyWallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -102,6 +103,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 2,
     name: 'My_Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -111,6 +113,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 3,
     name: 'My-Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -120,6 +123,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 4,
     name: 'My/Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -129,6 +133,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 5,
     name: 'My..Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -138,6 +143,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 6,
     name: 'My|Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -147,6 +153,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 7,
     name: 'My--Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -156,6 +163,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 8,
     name: 'MyeWallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',
@@ -165,6 +173,7 @@ export const projects: ProjectsProps[] = [
     key_techs: ['React', 'Firebase', 'Styled Component'],
   },
   {
+    id: 9,
     name: 'My21Wallet',
     description: 'Um webapp para controlar seus custos e finanças',
     image_path: '/images/teste.jpg',

@@ -11,6 +11,8 @@ export default function Projects() {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState('all');
 
+  const [showDetails, setShowDetails] = useState<number | null>(null);
+
   function handleFilterCategory(category: CategoryTypes | 'all') {
     if (category === 'all') {
       setProjects(projectsData);
@@ -52,7 +54,11 @@ export default function Projects() {
               className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200"
               key={project.name}
             >
-              <ProjectCard project={project} />
+              <ProjectCard
+                project={project}
+                showDetails={showDetails}
+                setShowDetails={setShowDetails}
+              />
             </motion.div>
           ))}
         </motion.div>
