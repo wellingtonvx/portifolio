@@ -42,13 +42,25 @@ export function Sidebar() {
 
       {/* social icons */}
       <div className="flex justify-around w-9/12 mx-auto text-green md:w-full">
-        <a href="https://github.com/wellingtonvx" target="_blank">
+        <a
+          href="https://github.com/wellingtonvx"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillGithub className="w-8 h-8 cursor-pointer" />
         </a>
-        <a href="https://www.linkedin.com/in/wellingtonrdr/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/wellingtonrdr/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
         </a>
-        <a href="https://www.instagram.com/wellingtonvx/" target="_blank">
+        <a
+          href="https://www.instagram.com/wellingtonvx/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillInstagram className="w-8 h-8 cursor-pointer" />
         </a>
       </div>

@@ -1,4 +1,5 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
+import Head from 'next/head';
 import { services } from '../util/data';
 import { ServiceCard } from '../components/ServiceCard';
 
@@ -14,6 +15,9 @@ export default function Home() {
       exit="exit"
       className="flex flex-col flex-grow px-6 pt-1"
     >
+      <Head>
+        <title>Portifólio | Wellington</title>
+      </Head>
       <h5 className="my-3 font-medium">
         Sou desenvolvedor JavaScript, amante de desenvolvimento. Tendo
         experiências em alguns projetos utilizando React/Next. No momento estou
@@ -48,12 +52,13 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   // const response = await fetch(`${process.env.VERCEL_URL}/api/services`);
   // const data = await response.json();
   return {
     props: {
       endpoint: process.env.VERCEL_URL,
     },
+    revalidate: 60 * 60 * 24 * 7, //1 week
   };
 };

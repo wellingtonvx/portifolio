@@ -20,12 +20,14 @@ export const NavItem: FunctionComponent<{
 
 export const ProjectsNavbar = props => {
   return (
-    <div className="flex px-3 py-3 space-x-3 overflow-x-auto list-none">
+    <div className="flex flex-wrap justify-center px-3 py-3 space-x-3 overflow-x-auto leading-8 text-center list-none ">
       <NavItem {...props} value="all" />
       <NavItem {...props} value="React" />
       <NavItem {...props} value="Nextjs" />
-      <NavItem {...props} value="React Native" />
+      <NavItem {...props} value="React-Native" />
       <NavItem {...props} value="Javascript" />
+      <NavItem {...props} value="NodeJs" />
+      <NavItem {...props} value="HTML & CSS" />
     </div>
   );
 };

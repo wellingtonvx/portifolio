@@ -1,5 +1,6 @@
 import { languages, tools } from '../util/data';
 import { Bar } from '../components/Bar';
+import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import { fadeInUp, routeAnimation } from '../util/animations';
@@ -13,6 +14,9 @@ export default function Resume() {
       exit="exit"
       className="px-4 py-2 "
     >
+      <Head>
+        <title>Portifólio | Wellington</title>
+      </Head>
       {/* //education */}
       <div className="grid gap-6 md:grid-cols-2">
         <motion.div variants={fadeInUp} initial="initial" animate="animate">

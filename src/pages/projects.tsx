@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import { ProjectCard } from '../components/ProjectCard';
 import { ProjectsNavbar } from '../components/ProjectsNavbar';
 import { motion } from 'framer-motion';
@@ -37,6 +38,9 @@ export default function Projects() {
       className="px-5 py-2 overflow-y-scroll"
       style={{ height: '65vh' }}
     >
+      <Head>
+        <title>Portifólio | Wellington</title>
+      </Head>
       <div>
         <ProjectsNavbar
           handleFilterCategory={handleFilterCategory}
@@ -51,7 +55,7 @@ export default function Projects() {
           {projects.map(project => (
             <motion.div
               variants={fadeInUp}
-              className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200"
+              className="col-span-12 p-2 duration-200 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200 dark:hover:bg-blue-500 hover:bg-blue-500 hover:text-white"
               key={project.name}
             >
               <ProjectCard

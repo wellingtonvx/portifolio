@@ -28,7 +28,7 @@ export const ProjectCard: FunctionComponent<{
       <Image
         src={image_path}
         alt={name}
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-150"
         onClick={() => setShowDetails(id)}
         width="300"
         height="150"
@@ -37,7 +37,7 @@ export const ProjectCard: FunctionComponent<{
       <p className="my-2 text-center">{name}</p>
 
       {showDetails === id && (
-        <div className=" fixed top-10 left-0 w-full z-20 grid  h-auto p-2 md:p-10 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100 rounded-lg">
+        <div className="fixed left-0 z-20 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg top-10 md:p-10 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100 ">
           <motion.div variants={stagger} initial="initial" animate="animate">
             <motion.div variants={fadeInUp} className="border-4 border-red-200">
               <Image
@@ -55,6 +55,7 @@ export const ProjectCard: FunctionComponent<{
               <a
                 href={github_url}
                 target="_blank"
+                rel="noreferrer"
                 className="flex items-center p-2 px-4 space-x-3 text-lg bg-gray-200 rounded-md dark:bg-dark-200"
               >
                 <AiFillGithub />
@@ -63,6 +64,7 @@ export const ProjectCard: FunctionComponent<{
               <a
                 href={deployer_url}
                 target="_blank"
+                rel="noreferrer"
                 className="flex items-center p-2 px-4 space-x-3 text-lg bg-gray-200 rounded-md dark:bg-dark-200"
               >
                 <AiFillProject />

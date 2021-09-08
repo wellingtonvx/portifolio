@@ -23,4 +23,10 @@ export interface ProjectsProps {
   key_techs: string[];
 }
 
-export type CategoryTypes = 'React' | 'Nextjs' | 'React Native' | 'Javascript';
+export type CategoryTypes =
+  | 'React'
+  | 'Nextjs'
+  | 'React-Native'
+  | 'Javascript'
+  | 'NodeJs'
+  | 'HTML & CSS';
