@@ -19,12 +19,11 @@ export default function Home() {
         <title>Portifólio | Wellington</title>
       </Head>
       <h5 className="my-3 font-medium">
-        Sou desenvolvedor JavaScript, amante de desenvolvimento. Tendo
-        experiências em alguns projetos utilizando React/Next. No momento estou
-        me aprimorando no desenvolvimento front-end, onde já tenho alguns cursos
-        e projetos pessoais. Tenho graduação tecnóloga em Redes de Computadores
-        e alguns projetos salvos no meu GitHub utilizando: HTML, CSS,
-        JavaScript, MySQL, MongoDB, React, NextJs, NodeJs.
+        Sou desenvolvedor frontend, amante de desenvolvimento. Tendo
+        experiências em alguns projetos utilizando React/Next. Tenho graduação
+        tecnóloga em Redes de Computadores e alguns projetos salvos no meu
+        GitHub utilizando: HTML, CSS, JavaScript, MySQL, MongoDB,React, NextJs,
+        NodeJs.
       </h5>
       <div
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
