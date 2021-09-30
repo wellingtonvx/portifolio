@@ -1,4 +1,3 @@
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { services } from '../util/data';
 import { ServiceCard } from '../components/ServiceCard';
@@ -50,14 +49,3 @@ export default function Home() {
     </motion.div>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  // const response = await fetch(`${process.env.VERCEL_URL}/api/services`);
-  // const data = await response.json();
-  return {
-    props: {
-      endpoint: process.env.VERCEL_URL,
-    },
-    revalidate: 60 * 60 * 24 * 7, //1 week
-  };
-};
