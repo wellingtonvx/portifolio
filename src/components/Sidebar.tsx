@@ -27,13 +27,12 @@ export function Sidebar() {
       <h3 className="my-4 text-2xl font-medium tracking-wider font-kaushan">
         <span>Welington </span>
         Ribeiro
-      </h3>
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200">
+        <br />
         Dev. Front-end
-      </p>
+      </h3>
       <a
         href="/curriculo.pdf"
-        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200"
+        className="flex items-center justify-center px-2 py-2 my-8 bg-gray-200 rounded-full dark:bg-dark-200"
         download="Currículo-José Wellington Ribeiro da Rocha"
       >
         <GiTie className="w-6 h-6" />
@@ -47,27 +46,27 @@ export function Sidebar() {
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillGithub className="w-8 h-8 cursor-pointer" />
+          <AiFillGithub className="w-10 h-10 cursor-pointer" />
         </a>
         <a
           href="https://www.linkedin.com/in/wellingtonrdr/"
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
+          <AiFillLinkedin className="w-10 h-10 cursor-pointer" />
         </a>
         <a
           href="https://www.instagram.com/wellingtonvx/"
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillInstagram className="w-8 h-8 cursor-pointer" />
+          <AiFillInstagram className="w-10 h-10 cursor-pointer" />
         </a>
       </div>
 
       {/* address */}
       <div
-        className="py-4 my-5 bg-gray-200 dark:bg-dark-200"
+        className="py-4 my-10 bg-gray-200 dark:bg-dark-200"
         style={{ marginLeft: '-1rem', marginRight: '-1rem' }}
       >
         <div className="flex items-center justify-center space-x-2">
@@ -77,18 +76,12 @@ export function Sidebar() {
         <p className="my-2">wellingtonvx@gmail.com</p>
         <p className="my-2">(85) 9 9793-3893</p>
       </div>
-      <button
-        className="w-8/12 px-5 py-2 my-2 font-semibold text-white bg-black rounded-full bg-gradient-to-r from-green to-blue-400 focus:outline-none"
-        onClick={() => window.open('mailto:wellingtonvx@gmail.com')}
-      >
-        Email
-      </button>
 
       <button
         onClick={changeTheme}
-        className="w-8/12 px-5 py-2 my-2 font-semibold text-white bg-black rounded-full bg-gradient-to-r from-green to-blue-400"
+        className="w-8/12 px-5 py-2 mb-5 font-semibold text-white bg-black rounded-full mt-28 bg-gradient-to-r from-green to-blue-400"
       >
-        Mudar UI
+        {theme === 'light' ? 'Tema Escuro' : 'Tema Claro'}
       </button>
     </div>
   );

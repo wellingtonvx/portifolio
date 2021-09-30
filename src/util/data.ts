@@ -191,4 +191,15 @@ export const projects: ProjectsProps[] = [
       'firebase',
     ],
   },
+  {
+    id: 11,
+    name: 'Gerador de Protocolo',
+    description:
+      'Um web app que utilizado no Antares para gerar os protocolos de movimentação de equipamento',
+    image_path: '/images/Protocolo.png',
+    deployer_url: 'https://protocolmaker.vercel.app/',
+    github_url: 'https://github.com/wellingtonvx/protocolmaker',
+    category: ['React', 'Nextjs'],
+    key_techs: ['React', 'JavaScript', 'Nextjs', 'Sass', 'React Toasty'],
+  },
 ];
